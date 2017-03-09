@@ -1,4 +1,4 @@
-<%= form_for @todo, :url => todos_path do |f| %>
+<%= form_for @todo do |f| %>
 	
 	<%= f.label :title, "Title" %>
 	<%= f.text_field :title %>
@@ -9,6 +9,8 @@
 	<%= f.label :description, "Description" %>
 	<%= f.text_area :description %>
 
-	<%= f.submit "Create" %>
+	<%= f.submit "Update" %>
 
 <% end %>
+
+<p><%= link_to 'Back to index', todos_path %></p>
